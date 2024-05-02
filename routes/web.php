@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrcamentoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(HomeController::class)->group(function() {
+    Route::get('/', 'Index')->name('index');
+});
+
+Route::controller(OrcamentoController::class)->group(function() {
+    Route::get('/orcamento', 'Index')->name('orcamento.index');
 });
