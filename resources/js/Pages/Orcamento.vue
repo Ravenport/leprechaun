@@ -1,8 +1,5 @@
 <template>
     <MenuLayout>
-        <h1>Teste
-            tetesret
-        </h1>
     </MenuLayout>
 </template>
 

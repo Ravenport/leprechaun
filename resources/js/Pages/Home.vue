@@ -1,12 +1,16 @@
 <template>
-    
+    <MenuLayout>
+        
+    </MenuLayout>
 </template>
 <script>
 import { defineComponent } from "vue";
 import MenuLayout from "../layouts/MenuLayout.vue";
 
 export default defineComponent ({
-    components: {},
+    components: {
+        MenuLayout,
+    },
     props: [],
     data() {
         return {
