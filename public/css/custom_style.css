@@ -1,8 +1,23 @@
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background: black;
+  border: 2px solid #FFD700 !important;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: black;
+  border: 2px solid #FFD700 !important;
+}
+
 .hover-underline-animation {
     display: inline-block;
     position: relative;
     color: #0087ca;
-  }
+}
   
 .hover-underline-animation::after {
   content: '';
@@ -24,4 +39,16 @@
 
 .text-gold {
   color: #FFD700 !important;
+}
+
+.border-gold {
+  border: 2px solid #FFD700 !important;
+}
+
+.range-gold {
+  accent-color: #FFD700 !important;
+}
+
+.fsrem-1 {
+  font-size: 1.1rem !important;
 }
