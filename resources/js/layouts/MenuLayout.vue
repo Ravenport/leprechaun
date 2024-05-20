@@ -1,9 +1,9 @@
 <template>
-    <div class="row container-fluid">
+    <div class="row">
         <div class="col-12">
             <div class="row">
                 <header>
-                    <nav class="navbar bg-body-tertiary pt-0 fixed-top">
+                    <nav class="navbar bg-body-tertiary pt-0 pb-0 fixed-top">
                         <div class="container-fluid shadow-sm ps-4 pt-0 pb-0 pe-4">
                             <div class="navbar-brand d-flex alig-items-end" href="#">
                                 <img class="me-1 p-1" style="width: 3em;" src="/images/icone_menu.svg" />
@@ -16,7 +16,7 @@
                             </button>
                         </div>
                     </nav>
-                    <div class="offcanvas bg-dark offcanvas-end" style="width: 15%;" tabindex="-1" id="offcanvas"
+                    <div class="offcanvas bg-dark border-start-gold offcanvas-end" style="width: 15%;" tabindex="-1" id="offcanvas"
                         data-bs-keyboard="false" data-bs-backdrop="false">
                         <div class="offcanvas-header justify-content-between">
                             <h6 class="offcanvas-title text-gold d-none d-sm-block" id="offcanvas">Menu</h6>
@@ -45,7 +45,8 @@
                         <div class="offcanvas-footer">
                             <div class="row">
                                 <div class="col-sm-12 ps-4 pb-2 d-flex justify-content-start">
-                                    <span class="text-gold">ícones por <a target="_blank" class="text-gold" href="https://icons8.com">Icons8</a></span>
+                                    <span class="text-gold">ícones por <a target="_blank" class="text-gold"
+                                            href="https://icons8.com">Icons8</a></span>
                                 </div>
                             </div>
                         </div>
@@ -53,16 +54,11 @@
                 </header>
             </div>
             <div class="row">
-
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col py-3">
-                            <!-- Conteudo da pagina -->
-                            <main class="container" style="margin-top: 7vh;">
-                                <slot></slot>
-                            </main>
-                        </div>
-                    </div>
+                <div class="col-12">
+                    <!-- Conteudo da pagina -->
+                    <main class="container-fluid pe-0" style="margin-top: 7vh;">
+                        <slot></slot>
+                    </main>
                 </div>
             </div>
         </div>
