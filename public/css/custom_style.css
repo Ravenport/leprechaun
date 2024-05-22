@@ -75,3 +75,7 @@
 .fsrem-1 {
   font-size: 1.1rem !important;
 }
+
+.filter-invert {
+  filter: invert(1);
+}

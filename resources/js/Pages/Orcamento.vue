@@ -186,65 +186,15 @@
                                 <hr class="m-0" style="border-top-width: 2px; border-color: rgb(255,255,255);">
                                 <div class="row mt-2 ms-2 me-2">
                                     <div class="col-lg-12">
-                                        <label for="gastosFixos"
-                                            class="form-label text-white mb-0 fw-bold fsrem-1">Gastos
-                                            Fixos</label>
-                                        <div class="row">
-                                            <div class="col-lg-10 d-flex align-items-center">
-                                                <input type="range" v-model="gastosFixos"
-                                                    :max="100 - (Number(luxos) + Number(investimentos) + Number(conhecimento))"
-                                                    class="slider w-100 range-gold" id="gastosFixos">
+                                        <div class="row justify-content-around mt-3">
+                                            <div class="col-lg-3 me-0 p-3 rounded border-gold">
+                                                <span class="fs-4 text-white">Total: </span>
                                             </div>
-                                            <div class="col-lg-1">
-                                                <span class="ms-2 text-gold fs-3">{{ gastosFixos }}%</span>
+                                            <div class="col-lg-3 ms-0 me-0 p-3 rounded border-gold">
+                                                <span class="fs-4 text-white">Total Investido: </span>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mt-2 ms-2 me-2">
-                                    <div class="col-lg-12">
-                                        <label for="luxos"
-                                            class="form-label text-white mb-0 fw-bold fsrem-1">Luxos</label>
-                                        <div class="row">
-                                            <div class="col-lg-10 d-flex align-items-center">
-                                                <input type="range" v-model="luxos"
-                                                    :max="100 - (Number(gastosFixos) + Number(investimentos) + Number(conhecimento))"
-                                                    class="slider w-100 range-gold" id="luxos">
-                                            </div>
-                                            <div class="col-lg-1">
-                                                <span class="ms-2 text-gold fs-3">{{ luxos }}%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mt-2 ms-2 me-2">
-                                    <div class="col-lg-12">
-                                        <label for="investimentos"
-                                            class="form-label text-white mb-0 fw-bold fsrem-1">Investimento</label>
-                                        <div class="row">
-                                            <div class="col-lg-10 d-flex align-items-center">
-                                                <input type="range" v-model="investimentos"
-                                                    :max="100 - (Number(luxos) + Number(gastosFixos) + Number(conhecimento))"
-                                                    class="slider w-100 range-gold" id="investimentos">
-                                            </div>
-                                            <div class="col-lg-1">
-                                                <span class="ms-2 text-gold fs-3">{{ investimentos }}%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mt-2 mb-2 ms-2 me-2">
-                                    <div class="col-lg-12">
-                                        <label for="conhecimento"
-                                            class="form-label text-white mb-0 fw-bold fsrem-1">Conhecimento</label>
-                                        <div class="row">
-                                            <div class="col-lg-10 d-flex align-items-center">
-                                                <input type="range" v-model="conhecimento"
-                                                    :max="100 - (Number(investimentos) + Number(luxos) + Number(gastosFixos))"
-                                                    class="slider w-100 range-gold" id="conhecimento">
-                                            </div>
-                                            <div class="col-lg-1">
-                                                <span class="ms-2 text-gold fs-3">{{ conhecimento }}%</span>
+                                            <div class="col-lg-3 ms-0 p-3 rounded border-gold">
+                                                <span class="fs-4 text-white">Total em Juros: </span>
                                             </div>
                                         </div>
                                     </div>

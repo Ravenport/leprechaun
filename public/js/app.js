@@ -23966,120 +23966,41 @@ var _hoisted_79 = {
 var _hoisted_80 = {
   "class": "fs-3 text-gold"
 };
-var _hoisted_81 = {
+var _hoisted_81 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "row mt-3 d-flex justify-content-between p-2"
-};
-var _hoisted_82 = {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-lg-12"
-};
-var _hoisted_83 = {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "row"
-};
-var _hoisted_84 = {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-lg-12 p-0"
-};
-var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-white mb-2 mt-2 ms-2 fs-2 me-2"
-}, "Calculo de Juros Compostos", -1 /* HOISTED */);
-var _hoisted_86 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
+}, "Calculo de Juros Compostos"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
   "class": "m-0",
   style: {
     "border-top-width": "2px",
     "border-color": "rgb(255,255,255)"
   }
-}, null, -1 /* HOISTED */);
-var _hoisted_87 = {
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "row mt-2 ms-2 me-2"
-};
-var _hoisted_88 = {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "col-lg-12"
-};
-var _hoisted_89 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "gastosFixos",
-  "class": "form-label text-white mb-0 fw-bold fsrem-1"
-}, "Gastos Fixos", -1 /* HOISTED */);
-var _hoisted_90 = {
-  "class": "row"
-};
-var _hoisted_91 = {
-  "class": "col-lg-10 d-flex align-items-center"
-};
-var _hoisted_92 = ["max"];
-var _hoisted_93 = {
-  "class": "col-lg-1"
-};
-var _hoisted_94 = {
-  "class": "ms-2 text-gold fs-3"
-};
-var _hoisted_95 = {
-  "class": "row mt-2 ms-2 me-2"
-};
-var _hoisted_96 = {
-  "class": "col-lg-12"
-};
-var _hoisted_97 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "luxos",
-  "class": "form-label text-white mb-0 fw-bold fsrem-1"
-}, "Luxos", -1 /* HOISTED */);
-var _hoisted_98 = {
-  "class": "row"
-};
-var _hoisted_99 = {
-  "class": "col-lg-10 d-flex align-items-center"
-};
-var _hoisted_100 = ["max"];
-var _hoisted_101 = {
-  "class": "col-lg-1"
-};
-var _hoisted_102 = {
-  "class": "ms-2 text-gold fs-3"
-};
-var _hoisted_103 = {
-  "class": "row mt-2 ms-2 me-2"
-};
-var _hoisted_104 = {
-  "class": "col-lg-12"
-};
-var _hoisted_105 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "investimentos",
-  "class": "form-label text-white mb-0 fw-bold fsrem-1"
-}, "Investimento", -1 /* HOISTED */);
-var _hoisted_106 = {
-  "class": "row"
-};
-var _hoisted_107 = {
-  "class": "col-lg-10 d-flex align-items-center"
-};
-var _hoisted_108 = ["max"];
-var _hoisted_109 = {
-  "class": "col-lg-1"
-};
-var _hoisted_110 = {
-  "class": "ms-2 text-gold fs-3"
-};
-var _hoisted_111 = {
-  "class": "row mt-2 mb-2 ms-2 me-2"
-};
-var _hoisted_112 = {
-  "class": "col-lg-12"
-};
-var _hoisted_113 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "for": "conhecimento",
-  "class": "form-label text-white mb-0 fw-bold fsrem-1"
-}, "Conhecimento", -1 /* HOISTED */);
-var _hoisted_114 = {
-  "class": "row"
-};
-var _hoisted_115 = {
-  "class": "col-lg-10 d-flex align-items-center"
-};
-var _hoisted_116 = ["max"];
-var _hoisted_117 = {
-  "class": "col-lg-1"
-};
-var _hoisted_118 = {
-  "class": "ms-2 text-gold fs-3"
-};
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row justify-content-around mt-3"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-3 me-0 p-3 rounded border-gold"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "fs-4 text-white"
+}, "Total: ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-3 ms-0 me-0 p-3 rounded border-gold"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "fs-4 text-white"
+}, "Total Investido: ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-3 ms-0 p-3 rounded border-gold"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "fs-4 text-white"
+}, "Total em Juros: ")])])])])])])])], -1 /* HOISTED */);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_MenuLayout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("MenuLayout");
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_MenuLayout, null, {
@@ -24144,39 +24065,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         max: 100 - (Number(_ctx.investimentos) + Number(_ctx.luxos) + Number(_ctx.gastosFixos)),
         "class": "slider w-100 range-gold",
         id: "conhecimento"
-      }, null, 8 /* PROPS */, _hoisted_53), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.conhecimento]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_55, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.conhecimento) + "%", 1 /* TEXT */)])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_56, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_57, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_58, [_hoisted_59, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_62, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.gastosFixos / 100).toFixed(2)), 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_63, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [_hoisted_65, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_68, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.luxos / 100).toFixed(2)), 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_69, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [_hoisted_71, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_73, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_74, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.investimentos / 100).toFixed(2)), 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [_hoisted_77, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_78, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_79, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_80, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.conhecimento / 100).toFixed(2)), 1 /* TEXT */)])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_81, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_83, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_84, [_hoisted_85, _hoisted_86, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_87, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_88, [_hoisted_89, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_90, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_91, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-        type: "range",
-        "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
-          return _ctx.gastosFixos = $event;
-        }),
-        max: 100 - (Number(_ctx.luxos) + Number(_ctx.investimentos) + Number(_ctx.conhecimento)),
-        "class": "slider w-100 range-gold",
-        id: "gastosFixos"
-      }, null, 8 /* PROPS */, _hoisted_92), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.gastosFixos]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_93, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_94, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.gastosFixos) + "%", 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_95, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_96, [_hoisted_97, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_98, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_99, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-        type: "range",
-        "onUpdate:modelValue": _cache[8] || (_cache[8] = function ($event) {
-          return _ctx.luxos = $event;
-        }),
-        max: 100 - (Number(_ctx.gastosFixos) + Number(_ctx.investimentos) + Number(_ctx.conhecimento)),
-        "class": "slider w-100 range-gold",
-        id: "luxos"
-      }, null, 8 /* PROPS */, _hoisted_100), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.luxos]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_101, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_102, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.luxos) + "%", 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_103, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_104, [_hoisted_105, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_106, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_107, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-        type: "range",
-        "onUpdate:modelValue": _cache[9] || (_cache[9] = function ($event) {
-          return _ctx.investimentos = $event;
-        }),
-        max: 100 - (Number(_ctx.luxos) + Number(_ctx.gastosFixos) + Number(_ctx.conhecimento)),
-        "class": "slider w-100 range-gold",
-        id: "investimentos"
-      }, null, 8 /* PROPS */, _hoisted_108), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.investimentos]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_109, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_110, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.investimentos) + "%", 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_111, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_112, [_hoisted_113, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_114, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_115, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-        type: "range",
-        "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
-          return _ctx.conhecimento = $event;
-        }),
-        max: 100 - (Number(_ctx.investimentos) + Number(_ctx.luxos) + Number(_ctx.gastosFixos)),
-        "class": "slider w-100 range-gold",
-        id: "conhecimento"
-      }, null, 8 /* PROPS */, _hoisted_116), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.conhecimento]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_117, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_118, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.conhecimento) + "%", 1 /* TEXT */)])])])])])])])])])])];
+      }, null, 8 /* PROPS */, _hoisted_53), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.conhecimento]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_55, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.conhecimento) + "%", 1 /* TEXT */)])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_56, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_57, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_58, [_hoisted_59, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_62, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.gastosFixos / 100).toFixed(2)), 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_63, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [_hoisted_65, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_68, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.luxos / 100).toFixed(2)), 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_69, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [_hoisted_71, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_73, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_74, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.investimentos / 100).toFixed(2)), 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [_hoisted_77, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_78, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_79, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_80, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.conhecimento / 100).toFixed(2)), 1 /* TEXT */)])])])])])]), _hoisted_81])])];
     }),
     _: 1 /* STABLE */
   });
@@ -24206,27 +24095,27 @@ var _hoisted_2 = {
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "row"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", {
-  "class": "navbar bg-body-tertiary pt-0 pb-0 fixed-top"
+  "class": "navbar bg-dark pt-0 pb-0 fixed-top"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "container-fluid shadow-sm ps-4 pt-0 pb-0 pe-4"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "navbar-brand d-flex alig-items-end",
   href: "#"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  "class": "me-1 p-1",
+  "class": "me-1 p-1 filter-invert",
   style: {
     "width": "3em"
   },
   src: "/images/icone_menu.svg"
 }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "fs-2 pt-2"
+  "class": "fs-2 pt-2 text-white"
 }, "Leprechaun")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" toggler "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
   "class": "btn float-end",
   "data-bs-toggle": "offcanvas",
   "data-bs-target": "#offcanvas",
   role: "button"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
-  "class": "bi bi-list fs-1",
+  "class": "bi bi-list fs-1 filter-invert",
   "data-bs-toggle": "offcanvas",
   "data-bs-target": "#offcanvas"
 })])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
