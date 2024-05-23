@@ -79,3 +79,11 @@
 .filter-invert {
   filter: invert(1);
 }
+
+.bg-dark {
+  background-color: #002000 !important;
+}
+
+.bg-light {
+  background-color: #eef3f3 !important;
+}

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{ asset('css/custom_style.css') }}">
 </head>
 
-<body class="bg-dark dark-theme container-fluid p-0 overflow-x-hidden">
+<body class="dark-theme bg-light container-fluid p-0 overflow-x-hidden">
     @inertia
     @env('local')
     <script src="http://localhost:3000/browser-sync/browser-sync-client.js"></script>

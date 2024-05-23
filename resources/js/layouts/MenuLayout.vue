@@ -3,20 +3,20 @@
         <div class="col-12">
             <div class="row">
                 <header>
-                    <nav class="navbar bg-dark pt-0 pb-0 fixed-top">
+                    <nav class="navbar pt-0 pb-0 fixed-top">
                         <div class="container-fluid shadow-sm ps-4 pt-0 pb-0 pe-4">
                             <div class="navbar-brand d-flex alig-items-end" href="#">
-                                <img class="me-1 p-1 filter-invert" style="width: 3em;" src="/images/icone_menu.svg" />
-                                <span class="fs-2 pt-2 text-white">Leprechaun</span>
+                                <img class="me-1 p-1" style="width: 3em;" src="/images/icone_menu.svg" />
+                                <span class="fs-2 pt-2">Leprechaun</span>
                             </div>
                             <!-- toggler -->
                             <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
                                 role="button">
-                                <i class="bi bi-list fs-1 filter-invert" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+                                <i class="bi bi-list fs-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
                             </button>
                         </div>
                     </nav>
-                    <div class="offcanvas bg-dark border-start-gold offcanvas-end" style="width: 15%;" tabindex="-1" id="offcanvas"
+                    <div class="offcanvas border-start-gold bg-dark offcanvas-end" style="width: 15%;" tabindex="-1" id="offcanvas"
                         data-bs-keyboard="false" data-bs-backdrop="false">
                         <div class="offcanvas-header justify-content-between">
                             <h6 class="offcanvas-title text-gold d-none d-sm-block" id="offcanvas">Menu</h6>
@@ -57,7 +57,7 @@
             <div class="row">
                 <div class="col-12">
                     <!-- Conteudo da pagina -->
-                    <main class="container-fluid pe-0" style="margin-top: 7vh;">
+                    <main class="container pe-0" style="margin-top: 7vh;">
                         <slot></slot>
                     </main>
                 </div>
