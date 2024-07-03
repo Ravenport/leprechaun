@@ -23629,9 +23629,52 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: [],
   data: function data() {
-    return {};
+    return {
+      valorOrcamento: 0,
+      gastosFixos: 0,
+      luxos: 0,
+      investimentos: 0,
+      conhecimento: 0,
+      somaPorcent: 0,
+      anosInvestidos: 1,
+      jurosAno: 0,
+      jurosDuranteTempo: {
+        totalInvestido: 0,
+        totalJuros: 0,
+        totalPatrimonio: 0
+      }
+    };
   },
-  methods: {}
+  methods: {
+    calcularJurosCompostos: function calcularJurosCompostos() {
+      this.jurosDuranteTempo.totalInvestido = 0;
+      this.jurosDuranteTempo.totalPatrimonio = 0;
+      this.jurosDuranteTempo.totalJuros = 0;
+      var jurosTempo = [];
+      var valorInvestimento = this.valorOrcamento * this.investimentos / 100;
+      var patrimonioAnterior;
+      var jurosAnterior;
+      var meses = this.anosInvestidos * 12;
+      for (var i = 0; i < meses; i++) {
+        this.jurosDuranteTempo.totalInvestido += valorInvestimento;
+        if (i == 0) {
+          patrimonioAnterior = valorInvestimento;
+        } else {
+          patrimonioAnterior = this.jurosDuranteTempo.totalPatrimonio + this.jurosDuranteTempo.totalInvestido;
+        }
+        this.jurosDuranteTempo.totalPatrimonio = patrimonioAnterior * Math.pow(1 + this.jurosAno / 100, meses);
+        jurosAnterior = this.jurosDuranteTempo.totalJuros;
+        this.jurosDuranteTempo.totalJuros = this.jurosDuranteTempo.totalPatrimonio - patrimonioAnterior;
+        jurosTempo.push({
+          totalPatrimonioAno: this.jurosDuranteTempo.totalPatrimonio,
+          totalJurosAno: this.jurosDuranteTempo.totalJuros,
+          totalInvestidoAno: this.jurosDuranteTempo.totalInvestido
+        });
+        console.log(patrimonioAnterior, this.jurosDuranteTempo.totalPatrimonio, this.jurosDuranteTempo.totalJuros, this.jurosDuranteTempo.totalInvestido);
+      }
+      console.log(jurosTempo);
+    }
+  }
 }));
 
 /***/ }),
@@ -23696,9 +23739,424 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "row p-3"
+};
+var _hoisted_2 = {
+  "class": "col-lg-12"
+};
+var _hoisted_3 = {
+  "class": "row bg-dark rounded mb-3 p-2"
+};
+var _hoisted_4 = {
+  "class": "col-lg-12"
+};
+var _hoisted_5 = {
+  "class": "row mb-3 mt-3 p-2"
+};
+var _hoisted_6 = {
+  "class": "col-lg-12 p-0"
+};
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-white mb-2 mt-2 ms-2 fs-2 me-2"
+}, "Painel de Orçamento", -1 /* HOISTED */);
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
+  "class": "m-0",
+  style: {
+    "border-top-width": "2px",
+    "border-color": "rgb(255,255,255)"
+  }
+}, null, -1 /* HOISTED */);
+var _hoisted_9 = {
+  "class": "row mt-2 ms-2 me-2 mb-2"
+};
+var _hoisted_10 = {
+  "class": "col-lg-3"
+};
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "calculoOrcamento",
+  "class": "form-label text-white"
+}, "Valor para Calculo:", -1 /* HOISTED */);
+var _hoisted_12 = {
+  "class": "input-group mb-3"
+};
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "input-group-text bg-dark text-gold border-gold"
+}, "R$", -1 /* HOISTED */);
+var _hoisted_14 = {
+  "class": "col-lg-3 d-flex justify-content-evenly"
+};
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "calculoJurosCompostos",
+  "class": "form-label text-white"
+}, "Juros por ano ", -1 /* HOISTED */);
+var _hoisted_16 = {
+  "class": "input-group mb-3"
+};
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "input-group-text bg-dark text-gold border-gold"
+}, "%", -1 /* HOISTED */);
+var _hoisted_18 = {
+  "class": "col-lg-3 d-flex justify-content-evenly"
+};
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "anosInvestidos",
+  "class": "form-label text-white"
+}, "Anos de investimento ", -1 /* HOISTED */);
+var _hoisted_20 = {
+  "class": "input-group mb-3"
+};
+var _hoisted_21 = {
+  key: 0,
+  "class": "input-group-text bg-dark text-gold border-gold"
+};
+var _hoisted_22 = {
+  key: 1,
+  "class": "input-group-text bg-dark text-gold border-gold"
+};
+var _hoisted_23 = {
+  "class": "col-lg-3 d-flex align-items-center mt-3"
+};
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "bi bi-bar-chart-fill"
+}, null, -1 /* HOISTED */);
+var _hoisted_25 = [_hoisted_24];
+var _hoisted_26 = {
+  "class": "row d-flex justify-content-between p-2"
+};
+var _hoisted_27 = {
+  "class": "col-lg-8"
+};
+var _hoisted_28 = {
+  "class": "row"
+};
+var _hoisted_29 = {
+  "class": "col-lg-11 p-3"
+};
+var _hoisted_30 = {
+  "class": "row mt-2"
+};
+var _hoisted_31 = {
+  "class": "col-lg-12"
+};
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "gastosFixos",
+  "class": "form-label text-white mb-0 fw-bold fsrem-1"
+}, "Gastos Fixos", -1 /* HOISTED */);
+var _hoisted_33 = {
+  "class": "row"
+};
+var _hoisted_34 = {
+  "class": "col-lg-10 d-flex align-items-center"
+};
+var _hoisted_35 = ["max"];
+var _hoisted_36 = {
+  "class": "col-lg-1"
+};
+var _hoisted_37 = {
+  "class": "ms-2 text-gold fs-3"
+};
+var _hoisted_38 = {
+  "class": "row mt-2"
+};
+var _hoisted_39 = {
+  "class": "col-lg-12"
+};
+var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "luxos",
+  "class": "form-label text-white mb-0 fw-bold fsrem-1"
+}, "Luxos", -1 /* HOISTED */);
+var _hoisted_41 = {
+  "class": "row"
+};
+var _hoisted_42 = {
+  "class": "col-lg-10 d-flex align-items-center"
+};
+var _hoisted_43 = ["max"];
+var _hoisted_44 = {
+  "class": "col-lg-1"
+};
+var _hoisted_45 = {
+  "class": "ms-2 text-gold fs-3"
+};
+var _hoisted_46 = {
+  "class": "row mt-2"
+};
+var _hoisted_47 = {
+  "class": "col-lg-12"
+};
+var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "investimentos",
+  "class": "form-label text-white mb-0 fw-bold fsrem-1"
+}, "Investimento", -1 /* HOISTED */);
+var _hoisted_49 = {
+  "class": "row"
+};
+var _hoisted_50 = {
+  "class": "col-lg-10 d-flex align-items-center"
+};
+var _hoisted_51 = ["max"];
+var _hoisted_52 = {
+  "class": "col-lg-1"
+};
+var _hoisted_53 = {
+  "class": "ms-2 text-gold fs-3"
+};
+var _hoisted_54 = {
+  "class": "row mt-2"
+};
+var _hoisted_55 = {
+  "class": "col-lg-12"
+};
+var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+  "for": "conhecimento",
+  "class": "form-label text-white mb-0 fw-bold fsrem-1"
+}, "Conhecimento", -1 /* HOISTED */);
+var _hoisted_57 = {
+  "class": "row"
+};
+var _hoisted_58 = {
+  "class": "col-lg-10 d-flex align-items-center"
+};
+var _hoisted_59 = ["max"];
+var _hoisted_60 = {
+  "class": "col-lg-1"
+};
+var _hoisted_61 = {
+  "class": "ms-2 text-gold fs-3"
+};
+var _hoisted_62 = {
+  "class": "col-lg-4 p-3"
+};
+var _hoisted_63 = {
+  "class": "row"
+};
+var _hoisted_64 = {
+  "class": "col-lg-12"
+};
+var _hoisted_65 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "fsrem-1 text-white"
+}, "Gastos Fixos")])], -1 /* HOISTED */);
+var _hoisted_66 = {
+  "class": "row"
+};
+var _hoisted_67 = {
+  "class": "col-lg-12"
+};
+var _hoisted_68 = {
+  "class": "fs-3 text-gold"
+};
+var _hoisted_69 = {
+  "class": "row"
+};
+var _hoisted_70 = {
+  "class": "col-lg-12"
+};
+var _hoisted_71 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "fsrem-1 text-white"
+}, "Luxos")])], -1 /* HOISTED */);
+var _hoisted_72 = {
+  "class": "row"
+};
+var _hoisted_73 = {
+  "class": "col-lg-12"
+};
+var _hoisted_74 = {
+  "class": "fs-3 text-gold"
+};
+var _hoisted_75 = {
+  "class": "row mt-3"
+};
+var _hoisted_76 = {
+  "class": "col-lg-12"
+};
+var _hoisted_77 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "fsrem-1 text-white"
+}, "Investimentos")])], -1 /* HOISTED */);
+var _hoisted_78 = {
+  "class": "row"
+};
+var _hoisted_79 = {
+  "class": "col-lg-12"
+};
+var _hoisted_80 = {
+  "class": "fs-3 text-gold"
+};
+var _hoisted_81 = {
+  "class": "row mt-3"
+};
+var _hoisted_82 = {
+  "class": "col-lg-12"
+};
+var _hoisted_83 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "row"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "col-lg-12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "fsrem-1 text-white"
+}, "Conhecimento")])], -1 /* HOISTED */);
+var _hoisted_84 = {
+  "class": "row"
+};
+var _hoisted_85 = {
+  "class": "col-lg-12"
+};
+var _hoisted_86 = {
+  "class": "fs-3 text-gold"
+};
+var _hoisted_87 = {
+  "class": "row bg-dark rounded mt-3 d-flex justify-content-between p-2 pb-4"
+};
+var _hoisted_88 = {
+  "class": "col-lg-12"
+};
+var _hoisted_89 = {
+  "class": "row"
+};
+var _hoisted_90 = {
+  "class": "col-lg-12 p-0"
+};
+var _hoisted_91 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-white mb-2 mt-2 ms-2 fs-2 me-2"
+}, "Calculo de Juros Compostos", -1 /* HOISTED */);
+var _hoisted_92 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
+  "class": "m-0",
+  style: {
+    "border-top-width": "2px",
+    "border-color": "rgb(255,255,255)"
+  }
+}, null, -1 /* HOISTED */);
+var _hoisted_93 = {
+  "class": "row mt-2 ms-2 me-2"
+};
+var _hoisted_94 = {
+  "class": "col-lg-12"
+};
+var _hoisted_95 = {
+  "class": "row justify-content-around mt-3"
+};
+var _hoisted_96 = {
+  "class": "col-lg-3"
+};
+var _hoisted_97 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "fs-5 text-white"
+}, "Total: ", -1 /* HOISTED */);
+var _hoisted_98 = {
+  "class": "me-0 ps-3 pe-3 pt-2 pb-2 rounded border-gold"
+};
+var _hoisted_99 = {
+  "class": "text-gold fs-4"
+};
+var _hoisted_100 = {
+  "class": "col-lg-3"
+};
+var _hoisted_101 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "fs-5 text-white"
+}, "Total Investido: ", -1 /* HOISTED */);
+var _hoisted_102 = {
+  "class": "me-0 ps-3 pe-3 pt-2 pb-2 rounded border-gold"
+};
+var _hoisted_103 = {
+  "class": "text-gold fs-4"
+};
+var _hoisted_104 = {
+  "class": "col-lg-3"
+};
+var _hoisted_105 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "fs-5 text-white"
+}, "Total em Juros: ", -1 /* HOISTED */);
+var _hoisted_106 = {
+  "class": "me-0 ps-3 pe-3 pt-2 pb-2 rounded border-gold"
+};
+var _hoisted_107 = {
+  "class": "text-gold fs-4"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_MenuLayout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("MenuLayout");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_MenuLayout);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_MenuLayout, null, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        id: "calculoOrcamento",
+        type: "number",
+        "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+          return _ctx.valorOrcamento = $event;
+        }),
+        step: "0.1",
+        "class": "form-control bg-dark text-white border-gold",
+        "aria-label": "Valor para orçar"
+      }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.valorOrcamento]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        id: "calculoJurosCompostos",
+        type: "number",
+        "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+          return _ctx.jurosAno = $event;
+        }),
+        step: "1",
+        "class": "form-control bg-dark text-white border-gold",
+        "aria-label": "Juros por ano"
+      }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.jurosAno]]), _hoisted_17])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        id: "anosInvestidos",
+        type: "number",
+        "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+          return _ctx.anosInvestidos = $event;
+        }),
+        min: "0",
+        step: "1",
+        "class": "form-control bg-dark text-white border-gold",
+        "aria-label": "Anos investidos"
+      }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.anosInvestidos]]), _ctx.anosInvestidos > 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_21, " Anos")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("span", _hoisted_22, " Ano"))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+        type: "button",
+        onClick: _cache[3] || (_cache[3] = function () {
+          return _ctx.calcularJurosCompostos && _ctx.calcularJurosCompostos.apply(_ctx, arguments);
+        }),
+        "class": "btn btn-primary bg-dark border-gold"
+      }, [].concat(_hoisted_25))])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        type: "range",
+        "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+          return _ctx.gastosFixos = $event;
+        }),
+        max: 100 - (Number(_ctx.luxos) + Number(_ctx.investimentos) + Number(_ctx.conhecimento)),
+        "class": "slider w-100 range-gold",
+        id: "gastosFixos"
+      }, null, 8 /* PROPS */, _hoisted_35), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.gastosFixos]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_37, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.gastosFixos) + "%", 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [_hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        type: "range",
+        "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
+          return _ctx.luxos = $event;
+        }),
+        max: 100 - (Number(_ctx.gastosFixos) + Number(_ctx.investimentos) + Number(_ctx.conhecimento)),
+        "class": "slider w-100 range-gold",
+        id: "luxos"
+      }, null, 8 /* PROPS */, _hoisted_43), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.luxos]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_45, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.luxos) + "%", 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [_hoisted_48, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        type: "range",
+        "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
+          return _ctx.investimentos = $event;
+        }),
+        max: 100 - (Number(_ctx.luxos) + Number(_ctx.gastosFixos) + Number(_ctx.conhecimento)),
+        "class": "slider w-100 range-gold",
+        id: "investimentos"
+      }, null, 8 /* PROPS */, _hoisted_51), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.investimentos]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_52, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_53, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.investimentos) + "%", 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, [_hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_57, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_58, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+        type: "range",
+        "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
+          return _ctx.conhecimento = $event;
+        }),
+        max: 100 - (Number(_ctx.investimentos) + Number(_ctx.luxos) + Number(_ctx.gastosFixos)),
+        "class": "slider w-100 range-gold",
+        id: "conhecimento"
+      }, null, 8 /* PROPS */, _hoisted_59), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.conhecimento]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_60, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_61, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.conhecimento) + "%", 1 /* TEXT */)])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_62, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_63, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [_hoisted_65, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_68, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.gastosFixos / 100).toFixed(2)), 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_69, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [_hoisted_71, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_73, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_74, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.luxos / 100).toFixed(2)), 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [_hoisted_77, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_78, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_79, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_80, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.investimentos / 100).toFixed(2)), 1 /* TEXT */)])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_81, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [_hoisted_83, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_84, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_85, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_86, " R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_ctx.valorOrcamento * _ctx.conhecimento / 100).toFixed(2)), 1 /* TEXT */)])])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_87, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_88, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_89, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_90, [_hoisted_91, _hoisted_92, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_93, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_94, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_95, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_96, [_hoisted_97, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_98, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_99, "R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.jurosDuranteTempo.totalPatrimonio.toFixed(2)), 1 /* TEXT */)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_100, [_hoisted_101, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_102, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_103, "R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.jurosDuranteTempo.totalInvestido.toFixed(2)), 1 /* TEXT */)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_104, [_hoisted_105, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_106, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_107, "R$ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.jurosDuranteTempo.totalJuros.toFixed(2)), 1 /* TEXT */)])])])])])])])])])])])];
+    }),
+    _: 1 /* STABLE */
+  });
 }
 
 /***/ }),
@@ -23717,7 +24175,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "row container-fluid"
+  "class": "row"
 };
 var _hoisted_2 = {
   "class": "col-12"
@@ -23725,7 +24183,7 @@ var _hoisted_2 = {
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "row"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", {
-  "class": "navbar bg-body-tertiary pt-0 fixed-top"
+  "class": "navbar pt-0 pb-0 fixed-top"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "container-fluid shadow-sm ps-4 pt-0 pb-0 pe-4"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -23749,7 +24207,7 @@ var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "data-bs-toggle": "offcanvas",
   "data-bs-target": "#offcanvas"
 })])])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "offcanvas bg-dark offcanvas-end",
+  "class": "offcanvas border-start-gold bg-dark offcanvas-end",
   style: {
     "width": "15%"
   },
@@ -23816,22 +24274,16 @@ var _hoisted_4 = {
   "class": "row"
 };
 var _hoisted_5 = {
-  "class": "container-fluid"
+  "class": "col-12"
 };
 var _hoisted_6 = {
-  "class": "row"
-};
-var _hoisted_7 = {
-  "class": "col py-3"
-};
-var _hoisted_8 = {
-  "class": "container",
+  "class": "container pe-0",
   style: {
     "margin-top": "7vh"
   }
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Conteudo da pagina "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])])])])])])]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Conteudo da pagina "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])])])])]);
 }
 
 /***/ }),

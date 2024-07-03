@@ -1,9 +1,9 @@
 <template>
-    <div class="row container-fluid">
+    <div class="row">
         <div class="col-12">
             <div class="row">
                 <header>
-                    <nav class="navbar bg-body-tertiary pt-0 fixed-top">
+                    <nav class="navbar pt-0 pb-0 fixed-top">
                         <div class="container-fluid shadow-sm ps-4 pt-0 pb-0 pe-4">
                             <div class="navbar-brand d-flex alig-items-end" href="#">
                                 <img class="me-1 p-1" style="width: 3em;" src="/images/icone_menu.svg" />
@@ -16,7 +16,7 @@
                             </button>
                         </div>
                     </nav>
-                    <div class="offcanvas bg-dark offcanvas-end" style="width: 15%;" tabindex="-1" id="offcanvas"
+                    <div class="offcanvas border-start-gold bg-dark offcanvas-end" style="width: 15%;" tabindex="-1" id="offcanvas"
                         data-bs-keyboard="false" data-bs-backdrop="false">
                         <div class="offcanvas-header justify-content-between">
                             <h6 class="offcanvas-title text-gold d-none d-sm-block" id="offcanvas">Menu</h6>
@@ -25,7 +25,8 @@
                                     fill="#FFD700" class="bi bi-x-lg" viewBox="0 0 16 16">
                                     <path
                                         d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                                </svg></button>
+                                </svg>
+                            </button>
                         </div>
                         <div class="offcanvas-body bg-dark px-0">
                             <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
@@ -45,7 +46,8 @@
                         <div class="offcanvas-footer">
                             <div class="row">
                                 <div class="col-sm-12 ps-4 pb-2 d-flex justify-content-start">
-                                    <span class="text-gold">ícones por <a target="_blank" class="text-gold" href="https://icons8.com">Icons8</a></span>
+                                    <span class="text-gold">ícones por <a target="_blank" class="text-gold"
+                                            href="https://icons8.com">Icons8</a></span>
                                 </div>
                             </div>
                         </div>
@@ -53,16 +55,11 @@
                 </header>
             </div>
             <div class="row">
-
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col py-3">
-                            <!-- Conteudo da pagina -->
-                            <main class="container" style="margin-top: 7vh;">
-                                <slot></slot>
-                            </main>
-                        </div>
-                    </div>
+                <div class="col-12">
+                    <!-- Conteudo da pagina -->
+                    <main class="container pe-0" style="margin-top: 7vh;">
+                        <slot></slot>
+                    </main>
                 </div>
             </div>
         </div>
