@@ -70,7 +70,7 @@
                                                     <div class="col-lg-10 d-flex align-items-center">
                                                         <input type="range" v-model="gastosFixos"
                                                             :max="100 - (Number(luxos) + Number(investimentos) + Number(conhecimento))"
-                                                            class="slider w-100 range-gold" id="gastosFixos">
+                                                            class="slider bg-dark w-100 range-gold" id="gastosFixos">
                                                     </div>
                                                     <div class="col-lg-1">
                                                         <span class="ms-2 text-gold fs-3">{{ gastosFixos }}%</span>
@@ -86,7 +86,7 @@
                                                     <div class="col-lg-10 d-flex align-items-center">
                                                         <input type="range" v-model="luxos"
                                                             :max="100 - (Number(gastosFixos) + Number(investimentos) + Number(conhecimento))"
-                                                            class="slider w-100 range-gold" id="luxos">
+                                                            class="slider bg-dark w-100 range-gold" id="luxos">
                                                     </div>
                                                     <div class="col-lg-1">
                                                         <span class="ms-2 text-gold fs-3">{{ luxos }}%</span>
@@ -102,7 +102,7 @@
                                                     <div class="col-lg-10 d-flex align-items-center">
                                                         <input type="range" v-model="investimentos"
                                                             :max="100 - (Number(luxos) + Number(gastosFixos) + Number(conhecimento))"
-                                                            class="slider w-100 range-gold" id="investimentos">
+                                                            class="slider bg-dark w-100 range-gold" id="investimentos">
                                                     </div>
                                                     <div class="col-lg-1">
                                                         <span class="ms-2 text-gold fs-3">{{ investimentos }}%</span>
@@ -118,7 +118,7 @@
                                                     <div class="col-lg-10 d-flex align-items-center">
                                                         <input type="range" v-model="conhecimento"
                                                             :max="100 - (Number(investimentos) + Number(luxos) + Number(gastosFixos))"
-                                                            class="slider w-100 range-gold" id="conhecimento">
+                                                            class="slider bg-dark w-100 range-gold" id="conhecimento">
                                                     </div>
                                                     <div class="col-lg-1">
                                                         <span class="ms-2 text-gold fs-3">{{ conhecimento }}%</span>
