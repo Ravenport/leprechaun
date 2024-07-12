@@ -277,15 +277,8 @@ export default defineComponent({
             for (let i = 0; i < meses; i++) {
                 this.jurosDuranteTempo.totalInvestido += valorInvestimento;
 
-                if(i == 0) {
-                    patrimonioAnterior = valorInvestimento;
-                } else {
-                    patrimonioAnterior = this.jurosDuranteTempo.totalPatrimonio + this.jurosDuranteTempo.totalInvestido;
-                }
-                this.jurosDuranteTempo.totalPatrimonio = patrimonioAnterior * ((1 + ((this.jurosAno) / 100)) ** meses);
-
-                jurosAnterior = this.jurosDuranteTempo.totalJuros;
-                this.jurosDuranteTempo.totalJuros = this.jurosDuranteTempo.totalPatrimonio - patrimonioAnterior;
+                patrimonioAnterior = this.jurosDuranteTempo.totalPatrimonio + valorInvestimento;
+                this.jurosDuranteTempo.totalPatrimonio = patrimonioAnterior * (() ** this.anosInvestidos)
                 jurosTempo.push(
                     {
                         totalPatrimonioAno: this.jurosDuranteTempo.totalPatrimonio,
